@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Mata Mosquito</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script>
+            function iniciarJogo(){
+                var dificuldade = document.getElementById('dificuldade').value
+                if (dificuldade != ''){
+                    if(dificuldade == 'facil')
+                    {
+                       window.location.href = 'game.html?facil'
+                    }
+                    if(dificuldade == 'normal')
+                    {
+                        window.location.href = 'game.html?normal'
+                    }
+                    if(dificuldade == 'dificil')
+                    {
+                        window.location.href = 'game.html?dificil'
+                    }
+                }else{
+                    alert('Selecione uma dificuldade para iniciar.')
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <img src="imagens/game.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <div class="m-2">
+                            <select id="dificuldade" class="form-control">
+                                <option value="">-- Selecione o nível --</option>
+                                <option value="facil">Fácil</option>
+                                <option value="normal">Normal</option>
+                                <option value="dificil">Difícil</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <button type="butto" class="btn btn-primary btn-lg" onclick="iniciarJogo()">Iniciar Jogo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
